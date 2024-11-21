@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tig-stack
+spec:
+  project: default
+  source:
+    repoURL: 'https://gitlab.telconet.ec/kmarmol/tig-stack.git'
+    targetRevision: HEAD
+    path: tig-stack
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
