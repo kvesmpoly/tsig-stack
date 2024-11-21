@@ -7,6 +7,7 @@ data:
     [agent]
       interval = "10s"
       flush_interval = "10s"
+      hostname = "telegraf"
 
     [[inputs.cisco_telemetry_mdt]]
       transport = "grpc"
@@ -15,6 +16,3 @@ data:
     [[outputs.influxdb]]
       urls = ["http://influxdb:8086"]
       database = "telegraf"
-      retention_policy = ""
-      write_consistency = "any"
-      timeout = "10s"
