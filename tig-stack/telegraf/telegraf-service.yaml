@@ -5,8 +5,9 @@ metadata:
 spec:
   selector:
     app: telegraf
-  type: ClusterIP
+  type: NodePort
   ports:
     - protocol: TCP
       port: 42518
       targetPort: 42518
+      nodePort: 30518  # Define un puerto dentro del rango 30000-32767
