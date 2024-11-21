@@ -1,8 +1,9 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: telegraf
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: telegraf

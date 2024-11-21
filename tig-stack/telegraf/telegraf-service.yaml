@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: telegraf
+  namespace: monitoring
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 42518
+    targetPort: 42518
+    protocol: TCP
+    name: grpc
+  selector:
+    app: telegraf
