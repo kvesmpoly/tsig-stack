@@ -7,6 +7,6 @@ spec:
     app: telegraf
   type: ClusterIP
   ports:
-  - protocol: TCP
-    port: 42518
-    targetPort: 42518
+    - protocol: TCP
+      port: 42518
+      targetPort: 42518
